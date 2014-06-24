@@ -12,6 +12,14 @@ demonstrating more useful functionality like physics and more complex touch even
 The fule game is being added as part of the game jam template files here:
 	https://github.com/marmalade/gbsgamejam
 
+To use
+------
+
+- Import into Marmalade 7.3 or 7.3.1.
+- To use with a newer version, you should delete the resources/quicklua folder and replace
+  it with the one from < new sdk >/quick/data/quicklua
+- If there are any issues, try creating a new Quick project and copying the contents of
+  resources - minus the quicklua folder - from the repo to the new project
 
 Features demonstrated
 ---------------------
