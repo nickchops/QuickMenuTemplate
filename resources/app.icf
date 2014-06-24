@@ -1,0 +1,10 @@
+[S3E]
+MemMgrMaxAllocWarning=0
+DispFixRot=FixedPortrait
+KeyAbsBSK=Back
+
+[GL]
+
+[QUICK]
+mainFilename="main.lua"
+configFileName="config.lua"
