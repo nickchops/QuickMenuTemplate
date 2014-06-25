@@ -20,9 +20,6 @@ local btnW = 400
 local btnH
 local btnScale
 
------------------------------------------------------------
-
-
 --------------------------------------------------------
 
 function sceneMainMenu:startup()
@@ -446,23 +443,6 @@ function loadUserData()
         --analytics:logEvent("loadUserData", {userName=gameInfo.lastUserName})
         file:close()
         dbg.print("game data loaded")
-    end
-
-    -- do "if nil then create" for all values so game can be updated and new settings get
-    -- initialised when save games already exist
-    if not gameInfo.highScore then
-        gameInfo.highScore = {waves={}, survival={}, streak={}}
-        local names = {"NIC", "MAR", "MAL", "ADE", "PAC", "JNR", "CRS", "I3D", "MRK", "FFS"}
-        for k,v in pairs(gameInfo.highScore) do
-            for n=1, 10 do
-                local score = (11-n)*20 --20->200
-                if k == "survival" then score = score/4 end --5->50
-                if k == "streak" then score = score/2-50 end --10->50
-                if score < 0 then score=0 end
-                v[n] = {name=names[n], score=score}
-                if score == 0 then v[n].name="XXX" end
-            end
-        end
     end
 
     if not gameInfo.name then gameInfo.name = "_P1" end --records last name entered to save re-entering
